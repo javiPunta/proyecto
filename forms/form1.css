@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    /* combina todos los espaciado (padding,margin) 
+    y tratar de no alterarlos sino tratar que se adapten al mismo tamaño */
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+   background-color: #0D1117;
+   color:white;
+   /* añadimos un pading para el espaciado de todo el cuerpo del html */
+    padding: 0 1.5em;
+    /* de arriba a bajo quiero que sea de 0 y a los lados de 1.5 */
+}
+
+.contact-wrapper {
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 0 20px 0 rgba(255,255, 255, .3);
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: #d11e48;
+    transition: background-color 0.2s ease-in-out;
+  }
+.gradient-container {
+    position: relative; /* para poder posicionar el gradiente con respecto al contenedor */
+  }
+.contact-wrapper:hover {
+    background-image: linear-gradient(to right, #9b1a38, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF);
+    ;
+    background-size: 600% 600%;
+    animation: gradient 10s ease infinite;
+}
+.gradient-container::after {
+    content: ''; /* contenido vacío */
+    position: absolute; /* para posicionar el gradiente dentro del contenedor */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* para que esté detrás del formulario */
+    background-image: linear-gradient(to right, #9b1a38, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF);
+    ;
+    background-size: 600% 600%;
+    animation: gradient 10s ease infinite;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0; /* inicialmente transparente */
+    border-radius: 10px; 
+
+  }
+  .gradient-container:hover::after {
+    opacity: 1; /* al pasar el ratón por encima, se vuelve visible */
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/* a todos los elementos del padding le añadimos 1em */
+.contact-wrapper > *{
+    padding: 0.3em;
+}
+.contact-form{
+    background-color: #222;
+    padding: 2em; /* aumenta el padding para separarlo del gradiente */
+}
+.contact-form form label, form input{
+    margin:0;
+    padding: 0.2em
+}
+
+.contact-form form input,
+.contact-form form textarea{
+    width:100%;
+    padding: .7em;
+    border:none;
+    background: none;
+    border-bottom: 1px solid #d11e48;
+    color:white;
+}
+
+
+button{
+    background-color:#9b1a38;
+    border:0;
+    text-transform: uppercase;
+    padding: 1em;
+    color: white;
+    margin-right: 1em; 
+    border-radius: 10px;
+    transition: background-color 1s ease-out;
+    transition: transform 0.2s ease-out;
+    /* para que el cambio de color no sea tan brusco */
+    outline:0;
+}
+ 
+input:focus{  
+    background-color: #d11e48;
+    /* para cuando pases raton */
+    color:white;
+    /* para cuando seleccione el boton */
+   
+}
+
+#espacio{
+    position: absolute;
+  bottom: 16px;
+  right: 20px;
+}
+#espacioB{
+    display: flex;
+    justify-content:space-between;
+}
+#espacioVA {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.5em 1em;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  /* especificamos la imagen gradiente */
+  border-image: linear-gradient(to right, #9b1a38, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF) 30;
+  /* especificamos el tamaño de la imagen de borde */
+  border-image-slice: 1;
+  /* especificamos el modo de la imagen de borde */
+  border-image-repeat: stretch;
+  /* transición para cuando el borde cambia de color */
+  transition: border-color 0.2s ease-in-out;
+}
+
+#espacioVA:hover {
+  /* cambiamos el color del borde en el hover */
+  border-color: #d11e48;
+  color: #d11e48;
+}
+
+  

@@ -1,0 +1,58 @@
+    
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+    *{
+        box-sizing: border-box;
+        /* combina todos los espaciado (padding,margin) 
+        y tratar de no alterarlos sino tratar que se adapten al mismo tamaño */
+    }
+    body{
+        font-family: 'Quicksand', sans-serif;
+       background-color: #0D1117;
+       color:black;
+       /* añadimos un pading para el espaciado de todo el cuerpo del html */
+        padding: 0 1.5em;
+        /* de arriba a bajo quiero que sea de 0 y a los lados de 1.5 */
+    }
+        span{
+            font-weight:bold;
+            text-decoration: underline;
+        }
+        .dos{
+            background-color: #c1b3fe;
+            border: #d11e48 5px groove;
+            height:500px;
+            width:600px;
+            margin:0px auto;
+            margin-top:100px;
+            padding: 1%;
+            overflow:scroll;
+        }
+        
+        
+        h1{
+            text-align:center;
+        }
+        input{
+            font-weight:bold;
+            margin-left:28% ;
+            margin-bottom:3% ;
+            margin-top:3% ;
+        }
+    
+       form input{
+        background-color:l#9b1a38;
+        border:0;
+        text-transform: uppercase;
+        padding: 0.5em;
+        
+    }
+    input:hover,
+    button:focus{
+       transform: scale(1.1);
+       background-color: #d11e48;
+       /* para cuando pases raton */
+       color:white;
+       /* para cuando seleccione el boton */
+      
+   }

@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    /* background: #485840; */
+    background: url(../../img/arka/paisaje.jpg);
+    display: flex;
+    align-items: center;
+    background-size: 100% 100%;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+
+/* color del fondo */
+.contenedor {
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    
+    position: relative;
+
+    background: linear-gradient(#c5ecd9, transparent) #ffedbd;/*linear-gradient(#90ebff, white);*/
+    transition: background-color 1s linear;
+    /* para que no se salgan los objetos del escenario */
+    overflow: hidden;
+}
+
+.mediodia {
+    background-color: #fdf79e;
+}
+
+.tarde {
+    background-color: #FFC444;
+}
+
+.noche {
+    background-color: #023D69;
+}
+
+.dino {
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(../../img/arka/dino3.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+
+}
+
+/* aqui solo corre */
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;
+}
+.dino-estrellado {
+    background-position-x: -252px;
+}
+
+.suelo {
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+/* para moverlo delante y detras */
+    background: url(../../img/arka/suelo.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+
+}
+
+.cactus{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(../../img/arka/cactus1.png) no-repeat;
+}
+.cactus2{
+    width: 98px;
+    height: 66px;
+
+    background: url(../../img/arka/cactus2.png) no-repeat;
+}
+
+.nube{
+    width: 92px;
+    height: 26px;
+
+    position: absolute;
+    z-index: 0;
+
+    background: url(../../img/arka/nube.png) no-repeat;
+    background-size: 92px 26px;
+}
+
+/* puntos */
+.score{
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+
+    color: #d48871;
+    font-family: Verdana;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.game-over{
+    display: none;
+
+    position: absolute;
+    width: 100%;
+
+
+    text-align: center;
+    color: #7e928b;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+}
+#botones-container {
+    position: absolute;
+    bottom: 18px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .button {
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(#fdf79e, #FFC444);
+    padding: 10px;
+    border-radius: 50px;
+    border: rgb(222, 211, 230) 5px solid;
+    font-size: 130%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(148, 211, 107);
+    padding: 10px;
+  }
+  
+  
+
+/* para que el fondo se mueva */
+@keyframes animarDino{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
+}

@@ -1,0 +1,75 @@
+body{
+  font-size: 50px;
+  padding: 10px;
+  background-color: rgb(39, 35, 35);
+  color: aliceblue;
+  height: 100vh;
+  background: url(../img/juego.jpg);
+  background-size: 100% 100%;
+
+  /* Agregamos estas propiedades para centrar los contenedores */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  margin-top: 8%;
+}
+
+.container img {
+  display: block;
+  margin: 0 auto;
+}
+
+.user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(148, 211, 107);
+  padding: 10px;
+}
+
+.user {
+  margin-bottom: 20px;
+}
+
+img {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: #ED0D90;
+}
+
+
+#espacioVA {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.5em ;
+  background-color: transparent;
+  color: white;
+  font-size: 0.5em;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  /* especificamos la imagen gradiente */
+  border-image: linear-gradient(to right, #9b1a38, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF) 30;
+  /* especificamos el tamaño de la imagen de borde */
+  border-image-slice: 0.5;
+  /* especificamos el modo de la imagen de borde */
+  border-image-repeat: stretch;
+  /* transición para cuando el borde cambia de color */
+  transition: border-color 0.2s ease-in-out;
+}
+
+#espacioVA:hover {
+  /* cambiamos el color del borde en el hover */
+  border-color: #d11e48;
+  color: #d11e48;
+}
