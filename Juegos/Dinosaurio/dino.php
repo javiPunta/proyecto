@@ -14,6 +14,7 @@
 <div class="user">
 
 <?php
+// Inicia sesión y cuando la sesion este iniciada te da un mensaje de bienvenida al usuario
 
 session_start();
 if(isset($_SESSION['nombre_user'])){
@@ -41,6 +42,7 @@ if(isset($_SESSION['nombre_user'])){
     <div id="botones-container">
     <button id="gafico-button" name="grafico">Ir a los gráficos</button>
     <button id="atras-button" name="atras">Volver atras</button>
+    <button id="session-button" name="cerrarsesion">Cerrar sesión</button>
 </div>
 
 

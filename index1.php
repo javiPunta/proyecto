@@ -43,8 +43,11 @@ https://www.tooplate.com/view/2113-earth
   </div>
 
   <div class="logo">
-    <h1>TicketsGame</h1>
-    <h2>TG</h2>
+    <h1>ATG</h1>
+    <!-- <h1>ATG</h1>
+    <h2>Awards</h2>
+    <h2>Tickets</h2>
+    <h2>Game</h2> -->
   </div>
   <nav>
     <ul>

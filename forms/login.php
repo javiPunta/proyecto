@@ -15,11 +15,11 @@
   <div class="contact-wrapper">
     <div class="gradient-container">
       <div class="contact-form">
+
         <!-- 
         USUARIO:javi27
         PASS: Km5cDp7z 
         -->
-
         <form action="../funciones/botone.php" method="post">
           <label for="usuario">Usuario</label>
           <input type="text" name="nombre_user" />
@@ -32,9 +32,10 @@
           <div id="espacioB">
             <button type="submit" name="boton" value="sesion" id="espacio1">Iniciar Sesión</button>
         </form>
+        
         <!-- Aquí en este form y el siguiente utilizo el metodo php post para que llame al archivo, 
         en vez de utilizar botones intento buscar nuevas propiedades para ahorrarme crear mas botones
-        en botones.php en un futuro y coger el mejor metodo -->
+        en botones.php para poder coger el mejor metodo -->
         <form action="form.php" method="post">
           <button type="submit" name="boton" value="registrar">Registrarse</button>
         </form>

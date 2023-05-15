@@ -16,23 +16,19 @@
     <div class="user">
 
         <?php
+        // Inicia sesión y cuando la sesion este iniciada te da un mensaje de bienvenida al usuario
 
-session_start();
-if (isset($_SESSION['nombre_user'])) {
-    echo "Bienvenido " . $_SESSION['nombre_user'] . "<br>";
-    echo "<a href='../../forms/form.php'>Ir al formulario</a>";
-} else {
-    header('Location:../../forms/login.php');
-    exit;
-}
-
-
-
+        session_start();
+        if (isset($_SESSION['nombre_user'])) {
+            echo "Bienvenido " . $_SESSION['nombre_user'] . "<br>";
+            // echo "<a href='../../forms/form.php'>Ir al formulario</a>";
+        } else {
+            header('Location:../../forms/login.php');
+            exit;
+        }
         ?>
     </div>
     <div id="nivel">Nivel: 1</div>
-    <br />
-    <br />
     <br />
     <br />
     <br />
@@ -50,32 +46,32 @@ if (isset($_SESSION['nombre_user'])) {
         <div class="finalizar-partida" onclick="finalizarPartida()">
             Finalizar Partida
         </div>
-       
-        <form action="memorama.php" method="post">
-    <button id="gafico-button" name="grafico">Ir a los gráficos</button>
-    <button id="atras-button" name="atras">Volver atras</button>
-    <button id="session-button" name="cerrarsesion">Cerrar sesión</button>
-    </form>
+
+
     </div>
 
-
-    <br />
-    <br />
-    <br />
-    <br />
-
     <div id="partidas-ganadas">Partidas Ganadas: 0</div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <form action="memorama.php" method="post">
+        <button id="gafico-button" name="grafico">Ir a los gráficos</button>
+        <button id="atras-button" name="atras">Volver atras</button>
+        <button id="session-button" name="cerrarsesion">Cerrar sesión</button>
+    </form>
+
     <?php
-if (isset($_POST["atras"])) {
-    header('Location: ../juegos.php');
- }
- if (isset($_POST["grafico"])) {
-    header('Location: ../../ranking/grafico.html');
- }
- if (isset($_POST["cerrarsesion"])) {
-    header('Location: ../../forms/logout.php');
- }
-?>
+    if (isset($_POST["atras"])) {
+        header('Location: ../juegos.php');
+    }
+    if (isset($_POST["grafico"])) {
+        header('Location: ../../ranking/grafico.html');
+    }
+    if (isset($_POST["cerrarsesion"])) {
+        header('Location: ../../forms/logout.php');
+    }
+    ?>
     <script>
         let iconos = [];
         let selecciones = [];
@@ -122,9 +118,6 @@ if (isset($_POST["atras"])) {
                 case 3:
                     numTarjetas = 12;
                     break;
-                    // case 4:
-                    // <a href="ranking.html" />
-                    // break;
             }
             for (let i = 0; i < numTarjetas * 2; i++) {
                 // class="area-tarjeta": Area de la tarjeta cuando esta totalmente quieta.
@@ -160,6 +153,7 @@ if (isset($_POST["atras"])) {
 
             tablero.innerHTML = tarjetas.join(" ");
         }
+
         function seleccionarTarjeta(i) {
             // Seleciona la tarjeta con el indice.
 

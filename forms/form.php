@@ -16,13 +16,13 @@
       <form action="../funciones/botone.php" method="post">
 
         <br>
-        Nombre Usuario: <input name="nombre_user" type="text" placeholder="50 caracteres máximo." required />
+        Nombre Usuario: <input name="nombre_user" type="text" placeholder="50 caracteres máximo. *" required />
         <br>
         <br>
         Nombre completo: <input name="nombre" type="text" placeholder="60 caracteres máximo." />
         <br>
         <br>
-        Correo electrónico: <input name="correo" type="text" placeholder="60 caracteres máximo." required />
+        Correo electrónico: <input name="correo" type="text" placeholder="60 caracteres máximo. *" required />
         <br>
         <br>
         Contraseña: <input name="pass" type="password" placeholder="********" required />
