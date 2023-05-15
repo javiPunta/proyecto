@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-body{
+body {
     height: 100vh;
     /* background: #485840; */
     background: url(../../img/arka/paisaje.jpg);
@@ -19,10 +19,11 @@ body{
     width: 920px;
     height: 280px;
     margin: 0 auto;
-    
+
     position: relative;
 
-    background: linear-gradient(#c5ecd9, transparent) #ffedbd;/*linear-gradient(#90ebff, white);*/
+    background: linear-gradient(#c5ecd9, transparent) #ffedbd;
+    /*linear-gradient(#90ebff, white);*/
     transition: background-color 1s linear;
     /* para que no se salgan los objetos del escenario */
     overflow: hidden;
@@ -59,6 +60,7 @@ body{
 .dino-corriendo {
     animation: animarDino 0.25s steps(2) infinite;
 }
+
 .dino-estrellado {
     background-position-x: -252px;
 }
@@ -70,13 +72,13 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-/* para moverlo delante y detras */
+    /* para moverlo delante y detras */
     background: url(../../img/arka/suelo.png) repeat-x 0px 0px;
     background-size: 50% 42px;
 
 }
 
-.cactus{
+.cactus {
     width: 46px;
     height: 96px;
 
@@ -87,14 +89,15 @@ body{
 
     background: url(../../img/arka/cactus1.png) no-repeat;
 }
-.cactus2{
+
+.cactus2 {
     width: 98px;
     height: 66px;
 
     background: url(../../img/arka/cactus2.png) no-repeat;
 }
 
-.nube{
+.nube {
     width: 92px;
     height: 26px;
 
@@ -106,7 +109,7 @@ body{
 }
 
 /* puntos */
-.score{
+.score {
     width: 100px;
     height: 30px;
 
@@ -122,7 +125,7 @@ body{
     text-align: right;
 }
 
-.game-over{
+.game-over {
     display: none;
 
     position: absolute;
@@ -135,14 +138,18 @@ body{
     font-family: Verdana;
     font-weight: 700;
 }
+
 #botones-container {
     position: absolute;
     bottom: 18px;
     right: 50%;
     transform: translateX(50%);
-  }
-  
-  .button {
+}
+
+#restart-button,
+#gafico-button,
+#atras-button,
+#session-button {
     font-weight: bold;
     cursor: pointer;
     background: linear-gradient(#fdf79e, #FFC444);
@@ -152,23 +159,26 @@ body{
     font-size: 130%;
     display: inline-block;
     margin-right: 10px;
-  }
-  .user {
+}
+
+
+.user {
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgb(148, 211, 107);
     padding: 10px;
-  }
-  
-  
+}
+
+
 
 /* para que el fondo se mueva */
-@keyframes animarDino{
-    from{
+@keyframes animarDino {
+    from {
         background-position-x: -84px;
     }
-    to{
+
+    to {
         background-position-x: -252px;
     }
 }

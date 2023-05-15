@@ -151,9 +151,7 @@ div {
   border: none;
 }
 #gafico-button,
-#atras-button,
-#session-button
-{
+#atras-button{
   font-weight: bold;
   cursor: pointer;
   background: linear-gradient(#FF1C51, #43204A);
@@ -162,3 +160,16 @@ div {
   border: rgb(222, 211, 230) 5px solid;
   font-size: 130%;
 }
+#session-button {
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(#FF1C51, #43204A);
+  padding: 20px;
+  border-radius: 50px;
+  border: rgb(222, 211, 230) 5px solid;
+  font-size: 130%;
+  /* Estilos adicionales para #session-button */
+  color: white;
+  text-transform: uppercase;
+}
+
